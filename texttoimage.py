@@ -24,7 +24,6 @@ def query_text_to_image(prompt):
 def text_to_image_page():
     """Text-to-Image Generation Page."""
     st.title("Text-to-Image Generator")
-    st.write("Enter a text prompt to generate an image using the FLUX model.")
 
     # Input field for the text prompt
     prompt = st.text_input("Enter your text prompt:")
