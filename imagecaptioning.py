@@ -19,7 +19,7 @@ def query(image_path):
 # Streamlit app
 def image_captioning_page():
     st.title("Image Captioning App")
-    st.write("Upload an image, and the app will generate a caption using the Hugging Face BLIP model.")
+    st.write("Upload an image, and the app will generate a caption.")
 
     # File uploader
     uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png", "jpeg"])
