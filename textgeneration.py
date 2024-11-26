@@ -12,11 +12,9 @@ def query(payload):
 
 # Streamlit UI for Text Generation with Llama model
 def llama_text_generation_page():
-    st.title("Text Generation with Llama-3.2-1B - Hugging Face")
+    st.title("Text Generation")
 
-    st.markdown("""
-    This app uses the **Llama-3.2-1B** model from Hugging Face to generate text based on the provided input prompt.
-    """)
+    #st.markdown("""This app uses the **Llama-3.2-1B** model from Hugging Face to generate text based on the provided input prompt.""")
 
     # User input for the prompt
     prompt = st.text_input("Enter the text prompt")
