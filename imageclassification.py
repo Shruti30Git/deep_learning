@@ -31,9 +31,8 @@ def format_results(output):
 
 def image_classification_page():
     """Image Classification Page."""
-    st.title("Image Classification with Hugging Face ViT")
-    st.markdown("Upload an image to classify its content using the ViT model!")
-
+    st.title("Image Classification")
+    
     # Image upload
     uploaded_file = st.file_uploader("Upload an Image (PNG/JPG/JPEG)", type=["png", "jpg", "jpeg"])
 
