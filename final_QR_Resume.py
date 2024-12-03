@@ -7,7 +7,7 @@ from PIL import Image
 def qr_code_generator_page():
     st.title("Basic Resume Generator")
     st.sidebar.title("Instructions")
-    st.sidebar.image("https://i.postimg.cc/rm74StkV/resume-concept-man-makes-resume-vector-illustration-flat-186332-1030.jpg",
+    st.sidebar.image("https://i.postimg.cc/CKp35ctJ/QR-Code-Generator.jpg",
                      use_column_width=True)
     st.sidebar.write("""
                     1. Enter text/URL.
@@ -50,6 +50,8 @@ def qr_code_generator_page():
 def resume_generator_page():
     st.title("Basic Resume Generator")
     st.sidebar.title("Instructions")
+    st.sidebar.image("https://i.postimg.cc/rm74StkV/resume-concept-man-makes-resume-vector-illustration-flat-186332-1030.jpg",
+                     use_column_width=True)
     st.sidebar.write("""
                     1. Enter your details.
                     2. It will generate HTML code.
