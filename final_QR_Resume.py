@@ -6,7 +6,13 @@ from PIL import Image
 # QR Code Generator Page
 def qr_code_generator_page():
     st.title("URL to QR Code Generator")
-
+    st.sidebar.title("Instructions")
+    st.sidebar.write("""
+                    1. Enter text/URL.
+                    2. Adjust the size 
+                    3. Click on "generate QR code".
+                    4. Download the QR.
+                    """)
     # User input for URL
     url = st.text_input("Enter the URL/Link:")
 
@@ -41,7 +47,12 @@ def qr_code_generator_page():
 # Resume Generator Page
 def resume_generator_page():
     st.title("Basic Resume Generator")
-
+    st.sidebar.title("Instructions")
+    st.sidebar.write("""
+                    1. Enter your details.
+                    2. It will generate HTML code.
+                    3. Download the file to get your Resume.
+                    """)
     # Input Fields for Resume Details
     name = st.text_input("Full Name")
 
