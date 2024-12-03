@@ -5,8 +5,10 @@ from PIL import Image
 
 # QR Code Generator Page
 def qr_code_generator_page():
-    st.title("URL to QR Code Generator")
+    st.title("Basic Resume Generator")
     st.sidebar.title("Instructions")
+    st.sidebar.image("https://i.postimg.cc/rm74StkV/resume-concept-man-makes-resume-vector-illustration-flat-186332-1030.jpg",
+                     use_column_width=True)
     st.sidebar.write("""
                     1. Enter text/URL.
                     2. Adjust the size 
