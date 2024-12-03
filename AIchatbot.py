@@ -31,6 +31,11 @@ def chatbot_page():
 
     # Title and instructions
     st.title("AI Chatbot")
+    st.markdown("Chat with the **Qwen2.5-Coder-32B-Instruct** model powered by Hugging Face.")
+    st.sidebar.title("Instructions")
+    st.sidebar.image(
+        "https://i.postimg.cc/kGRfPbCz/Screenshot-20241203-141013-Google.jpg",
+        use_column_width=True)
 
     # Function to handle user input and update the chat
     def handle_input():
