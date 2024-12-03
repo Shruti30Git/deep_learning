@@ -10,6 +10,9 @@ def wordcloud_page():
 
     # Sidebar with instructions
     st.sidebar.title("Instructions")
+    st.sidebar.image(
+        "https://i.postimg.cc/fybkVcyq/images.png",
+        use_column_width=True)
     st.sidebar.write("""
     1. Enter a few lines of text or a prompt in the text box.
     2. Click 'Generate Word Cloud' to visualize the most frequent words.
