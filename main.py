@@ -1,3 +1,5 @@
+# main.py
+
 import streamlit as st
 from streamlit_option_menu import option_menu
 from imagecaptioning import image_captioning_page
@@ -8,6 +10,9 @@ from objdetetction import object_detection_page
 from sentiment_analysis import sentiment_analysis_page
 from textgeneration import llama_text_generation_page
 from AIchatbot import chatbot_page
+from word_cloud import wordcloud_page  # Import wordcloud page
+from urltotext import urltotext_page  # Import urltotext page
+
 # Main application
 def main():
     # Custom CSS to increase font size and styling
@@ -57,8 +62,8 @@ def show_ai_tools_page():
 
     selected_subsection = option_menu(
         menu_title="AI Tools",  # Subsection header
-        options=[ "Utility Tools", "Image Tools", "Text Tools"],  # Add "None" option
-        icons=[ "gear", "image", "pencil"],  # Icons for subsections
+        options=["Utility Tools", "Image Tools", "Text Tools"],  # Add "None" option
+        icons=["gear", "image", "pencil"],  # Icons for subsections
         menu_icon="tools",  # Icon for AI Tools
         default_index=0,  # Default subsection is "None"
         orientation="horizontal",  # Subsection bar is horizontal
@@ -78,7 +83,7 @@ def show_ai_tools_page():
 def show_utility_tools():
     st.markdown("### Utility Tools")
     utility_tool = st.radio(
-        "Choose a tool:", ["None","QR Code Generator", "Resume Generator","AI chat bot"], key="utility_tool", index=0
+        "Choose a tool:", ["None", "QR Code Generator", "Resume Generator", "AI chat bot", "Word Cloud Generator", "Image Description Generator"], key="utility_tool", index=0
     )
     if utility_tool == "None":
         st.write("Please select a tool to proceed.")
@@ -88,14 +93,18 @@ def show_utility_tools():
         resume_generator_page()
     elif utility_tool == "AI chat bot":
         chatbot_page()
+    elif utility_tool == "Word Cloud Generator":
+        wordcloud_page()
+    elif utility_tool == "Image Description Generator":
+        # Redirect to URL-to-Text page
+        urltotext_page()
 
 
 def show_image_tools():
     st.markdown("### Image Tools")
-   # st.markdown("Analyze and work with images using AI-powered tools.")
     image_tool = st.radio(
         "Select an Image Tool:",
-        ["None","Image Classification", "Image Captioning", "Object Detection"],
+        ["None", "Image Classification", "Image Captioning", "Object Detection"],
         key="image_tool", index=0
     )
     if image_tool == "None":
@@ -110,10 +119,9 @@ def show_image_tools():
 
 def show_text_tools():
     st.markdown("### Text Tools")
-  #  st.markdown("Generate, analyze, or convert text with AI tools.")
     text_tool = st.radio(
         "Choose a Text Tool:",
-        ["None","Sentiment Analysis", "Text Generation", "Text to Image"],
+        ["None", "Sentiment Analysis", "Text Generation", "Text to Image"],
         key="text_tool", index=0
     )
     if text_tool == "None":
@@ -134,7 +142,6 @@ def show_home_page():
     Get started by exploring any of the available tools and let the AI enhance your work!
     """)
 
-    # Add Image from URL at the Bottom (Larger Image) and Center it
     image_url = "https://i.postimg.cc/43zVvNxp/1000350323.png"  # Replace with your image URL
     st.markdown("<div style='text-align: center;'>", unsafe_allow_html=True)
     st.image(image_url, use_column_width=False, width=600)  # Adjust size of the image (larger size)
@@ -161,3 +168,5 @@ def show_contact_page():
 
 if __name__ == "__main__":
     main()
+
+
