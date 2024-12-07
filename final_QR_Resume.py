@@ -5,7 +5,7 @@ from PIL import Image
 
 # QR Code Generator Page
 def qr_code_generator_page():
-    st.title("Basic Resume Generator")
+    st.title("QR Generator")
     st.sidebar.title("Instructions")
     st.sidebar.image("https://i.postimg.cc/CKp35ctJ/QR-Code-Generator.jpg",
                      use_column_width=True)
